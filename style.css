@@ -518,16 +518,19 @@ img {
   margin-top: 3rem;
 }
 
-@media (max-width: 360px) {
-  .trust-bar .profile-circle-container {
-    display: none;
-  }
-  .trust-bar-icon {
-    width: 20px;
-    height: 20px;
-  }
+.trust-bar .profile-circle-container {
+  display: none;
 }
 
+.trust-bar-icon {
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1024px) {
+  .trust-bar .profile-circle-container {
+    display: block;
+  }
+}
 @media (min-width: 1024px) {
   .trust-bar {
     display: flex;
@@ -1483,4 +1486,35 @@ span svg {
 .graphics-section-content {
   display: flex;
   flex-direction: column;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+}
+
+.footer.logo {
+  width: 96px;
+  height: 96px;
+}
+
+.logo-container {
+  border: 2px solid blue;
+  padding-left: 0;
+}
+/*==================== WHY SECTION =======================*/
+
+.why .container {
+  display: grid;
+}
+
+@media (min-width: 1024px) {
+  .why .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.why div {
+  border: 2px solid green;
 }
