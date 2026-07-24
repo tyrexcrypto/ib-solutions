@@ -596,7 +596,7 @@ img {
 .card {
   border: 1px solid var(--border);
   border-radius: 22px;
-  box-shadow: var(--shadow);
+  box-shadow: 1px 1px 10px #252323a1;
   background: rgba(255, 255, 255, 0.02);
   transition: 0.2s ease;
   padding: 2rem;
@@ -1509,10 +1509,17 @@ span svg {
 
 .why .container {
   display: grid;
+  gap: 1rem;
 }
 
 @media (min-width: 1024px) {
   .why .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .why-section-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
