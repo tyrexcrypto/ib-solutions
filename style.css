@@ -1597,6 +1597,21 @@ span svg {
   min-height: 100vh;
 }
 
+.sms-page-hero .tagline {
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 10px;
+  font-weight: 600;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  color: var(--accent);
+  background: hsla(357, 92%, 85%, 0.792);
+}
+
+.sms-page-hero .tagline p {
+}
+
 .sms-trust-section {
   background: var(--accent);
 }
@@ -1643,4 +1658,88 @@ span svg {
   margin-top: 3rem;
   flex-direction: column;
   gap: 2rem;
+}
+
+.number-illustration {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.how-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.how {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.how-list .icon-container,
+.feature .icon-container {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.how-it-works .container {
+  display: grid;
+  gap: 3rem;
+}
+
+.features .container {
+  display: grid;
+  gap: 3rem;
+}
+.feature {
+  display: flex;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+.features-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.sms-page-cta .container {
+  text-align: center;
+}
+
+.cta button {
+  color: var(--accent);
+}
+
+.cta button svg {
+  height: 16px;
+  width: 16px;
+}
+
+.numbers-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.features .visuals-container {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.number {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  align-items: center;
 }
