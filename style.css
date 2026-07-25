@@ -206,7 +206,7 @@ nav {
   display: grid;
   place-items: center;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.03);
   cursor: pointer;
   transition: 0.3s;
@@ -233,6 +233,7 @@ nav {
   color: white;
   text-decoration: none;
   transition: 0.25s;
+  margin: 0 0.5rem;
 }
 
 .sidebar-links a:hover {
@@ -241,14 +242,22 @@ nav {
 }
 
 .sidebar-btns {
-  margin-top: auto; /* should be auto here */
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-top: auto;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+.sidebar .socials {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar-btns {
+  border-top: 1px solid var(--border);
+}
 .overlay {
   position: fixed;
   inset: 0;
@@ -409,7 +418,7 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 img {
@@ -463,16 +472,20 @@ img {
   content: "";
   position: absolute;
   inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  /*
   background: radial-gradient(
     circle at top right,
     rgba(181, 9, 20, 0.3),
     transparent 40%
   );
   pointer-events: none;
+  */
 }
 
 .hero .container {
-  min-height: inherit;
+  /*min-height: inherit;*/
   display: flex;
   flex-direction: column;
 }
@@ -481,6 +494,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-buttons {
@@ -519,10 +534,12 @@ img {
 /*==================================== TRUST BARS STYLING ==============================*/
 
 .trust-bar {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .trust-bar .profile-circle-container {
@@ -544,7 +561,7 @@ img {
     flex-direction: row;
     align-items: center;
     gap: 4rem;
-    margin-top: auto;
+    margin-top: 5rem;
   }
 }
 
@@ -587,7 +604,7 @@ img {
 
 .services-list {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -639,8 +656,8 @@ img {
 }
 
 .service-card .icon-container {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -945,7 +962,6 @@ svg {
 .profile-circle-container {
   display: grid;
   gap: 2rem;
-  border: 2px solid blue;
 }
 
 /*=================================== FOOTER =========================================*/
@@ -979,9 +995,9 @@ footer {
 }
 
 .footer-bottom {
-  margin-top: 2rem;
+  margin-top: 3rem;
   border-top: 1px solid var(--border);
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 @media (max-width: 650px) {
@@ -994,9 +1010,23 @@ footer {
   }
 }
 
+@media (min-width: 1024px) {
+  .footer-bottom {
+    margin-top: 3rem;
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+  }
+}
+
 .footer-bottom .container {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.payment-logos {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -1004,6 +1034,10 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .payment-logos {
+    display: block;
   }
 }
 
@@ -1064,9 +1098,16 @@ footer {
   gap: 2rem;
 }
 
+.sidebar .socials .footer-socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .footer-socials {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .footer-section-header {
@@ -1087,20 +1128,41 @@ footer {
 }
 
 .social-icon-container {
-  border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(
+    to bottom right,
+    var(--accent),
+    var(--darker-accent)
+  );
+  border-radius: 10px;
   width: 48px;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.social-icon-container a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-details-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/*
 .social-icon-container:hover {
   background: rgba(255, 255, 255, 0.02);
   border-color: rgba(222, 110, 117, 0.58);
 }
+  */
 
 .community-logo-container {
   width: 64px;
@@ -1403,9 +1465,15 @@ span svg {
   gap: 1rem;
   overflow-x: scroll;
   scrollbar-width: none;
+  padding-left: 1rem;
 }
 
 .testimony-section .container {
+  display: grid;
+  gap: 2rem;
+}
+
+.testimony-section {
   display: grid;
   gap: 2rem;
 }
@@ -1443,6 +1511,9 @@ span svg {
 
 .moving-forward {
   padding-left: 1rem;
+}
+
+.moving-backward {
 }
 
 .brand-social-icons-container {
@@ -1539,19 +1610,34 @@ span svg {
 .why div {
 }
 
-.footer-logo-container {
-  margin: 0 auto;
-  width: 200px;
-  height: 200px;
+.legal {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+@media (min-width: 1024px) {
+  .legal {
+    display: none;
+  }
+}
+
+.footer-logo-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
   align-items: center;
 }
 
-.footer-logo-container img {
-  width: 200px;
-  height: 200px;
+.text p {
+  color: var(--muted);
 }
+
+.footer-logo-container img {
+  width: 100px;
+  height: 100px;
+}
+
 .why-section-bottom {
 }
 
@@ -1679,6 +1765,14 @@ span svg {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
+}
+
+.bold-number {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: rgba(255, 255, 255, 0.454);
 }
 
 .how-list .icon-container,
@@ -1735,6 +1829,14 @@ span svg {
   border-radius: 16px;
 }
 
+.visuals-container .bottom {
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  align-items: center;
+}
+
 .number {
   display: flex;
   justify-content: space-between;
@@ -1742,4 +1844,23 @@ span svg {
   border-radius: 16px;
   padding: 1rem;
   align-items: center;
+}
+
+.countries-list .section-contents .country {
+  border: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  align-items: center;
+  width: fit-content;
+}
+
+.flag-container {
+  width: 16px;
+  height: 16px;
+}
+
+.sms-page-testimonials .testimonies {
+  display: grid;
 }
