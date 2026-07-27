@@ -90,6 +90,12 @@ html {
   align-items: center;
 }
 
+.fr-g0-5 {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
 /*===== flex row align items =====*/
 
 section {
@@ -258,7 +264,7 @@ nav {
 }
 
 .sidebar-btns {
-  border-top: 1px solid var(--border);
+  margin-top: 5rem;
 }
 .overlay {
   position: fixed;
@@ -452,6 +458,10 @@ img {
   letter-spacing: 0.16rem;
   text-transform: uppercase;
   color: #ffb7b7;
+}
+
+.sms-page-hero .hero-content .tagline-container {
+  margin: 0 auto;
 }
 
 .hero-tagline {
@@ -1886,16 +1896,19 @@ span svg {
 }
 
 .sms-trust-section {
-  background: var(--accent);
-  border-radius: 24px;
-  width: min(92%, 1120px);
-  margin: 0 auto;
 }
 
 .sms-trust-section .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--accent),
+    var(--darker-accent)
+  );
+  border-radius: 24px;
+  padding: 3rem 0;
 }
 
 .sms-trust-section .container > div {
@@ -1961,6 +1974,12 @@ span svg {
   position: relative;
 }
 
+.feature {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
 .bold-number {
   position: absolute;
   top: 16px;
@@ -1985,6 +2004,7 @@ span svg {
   display: grid;
   gap: 3rem;
 }
+
 .feature {
   display: flex;
   grid-template-columns: auto 1fr;
@@ -1994,6 +2014,11 @@ span svg {
 .features-list {
   display: grid;
   gap: 1rem;
+}
+
+.text-container {
+  display: grid;
+  gap: 0.5rem;
 }
 
 .sms-page-cta .container {
@@ -2039,7 +2064,12 @@ span svg {
   align-items: center;
 }
 
-.countries-list .section-contents .country {
+.countries .container {
+  display: grid;
+  gap: 3rem;
+}
+
+.countries .section-contents .country {
   border: 1px solid var(--border);
   display: flex;
   gap: 1rem;
@@ -2047,6 +2077,12 @@ span svg {
   border-radius: 10px;
   align-items: center;
   width: fit-content;
+}
+
+.countries-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .flag-container {
@@ -2112,8 +2148,8 @@ span svg {
 
 .green-net-dots {
   background: green;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 16px;
   border: 2px solid hsl(120, 50%, 78%);
 }
@@ -2121,17 +2157,78 @@ span svg {
 .number-illustration {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   width: fit-content;
   margin: 0 auto;
+  font-size: 12px;
+}
+
+.numbers-list .number-illustration {
+  width: 100%;
+}
+
+.number-illustration .num {
+  text-decoration: underline;
+  color: blue;
 }
 
 .country-flag-container {
-  border: 1px solid var(--border);
   width: 36px;
   height: 36px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.tag {
+  padding: 0.2rem 1rem;
+  border-radius: 22px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.bottom .small {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.green {
+  color: rgb(75, 171, 75);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgb(75, 171, 75);
+}
+
+.otp {
+  color: rgb(51, 111, 250);
+  background: rgba(0, 76, 255, 0.139);
+}
+
+.rent {
+  color: rgb(193, 152, 76);
+  background: rgba(255, 166, 0, 0.139);
+}
+
+.active {
+  color: rgb(75, 171, 75);
+  background: rgba(75, 171, 75, 0.139);
+}
+
+.features .container .visuals-container {
+  background: rgba(14, 15, 28, 0.906);
+}
+
+.testimonials .container {
+  display: grid;
+  gap: 3rem;
 }
