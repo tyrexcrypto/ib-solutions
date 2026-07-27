@@ -334,6 +334,7 @@ ul {
   border: 1px solid transparent;
   height: 48px;
   font-family: inherit;
+  box-shadow: 1px 1px 10px #252323a1;
   transition:
     transform 0.2s ease,
     background 0.2s ease,
@@ -694,7 +695,7 @@ img {
 .card {
   border: 1px solid var(--border);
   border-radius: 22px;
-  box-shadow: 1px 1px 10px #252323a1;
+
   background: rgba(255, 255, 255, 0.02);
   transition: 0.2s ease;
   padding: 2rem;
@@ -1880,6 +1881,11 @@ span svg {
   min-height: 100vh;
 }
 
+.sms-page-hero .btn {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .sms-page-hero .tagline {
   border: 1px solid var(--accent);
   border-radius: 999px;
@@ -2151,7 +2157,7 @@ span svg {
   width: 12px;
   height: 12px;
   border-radius: 16px;
-  border: 2px solid hsl(120, 50%, 78%);
+  border: 3px solid rgb(102, 174, 102);
 }
 
 .number-illustration {
