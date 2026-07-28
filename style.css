@@ -695,7 +695,6 @@ img {
 .card {
   border: 1px solid var(--border);
   border-radius: 22px;
-
   background: rgba(255, 255, 255, 0.02);
   transition: 0.2s ease;
   padding: 2rem;
@@ -1878,7 +1877,6 @@ span svg {
 }
 
 .sms-page-hero .btn {
-  width: fit-content;
   margin: 0 auto;
 }
 
@@ -2055,6 +2053,25 @@ span svg {
   border-radius: 16px;
 }
 
+.sma-container {
+  width: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 2px 2px 20px #252323a1;
+  border: 2px solid rgba(6, 6, 6, 0.135);
+}
+
+.sma-containerimg {
+  display: block;
+  width: 100%;
+}
+
+.features .container .slant {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .visuals-container .bottom {
   border-top: 1px solid var(--border);
   display: flex;
@@ -2119,6 +2136,14 @@ span svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.product-card h4 {
+  font-size: 14px;
+}
+
+.product-card p {
+  font-size: 12px;
 }
 
 .product-card .icon-container {
@@ -2303,4 +2328,31 @@ span svg {
 
 a .btn {
   width: 100%;
+}
+
+.sma-qualities {
+  display: grid;
+  gap: 0.5rem;
+  border: 1px solid rgba(181, 9, 21, 0.2);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin: 1rem 0;
+  background-color: rgba(181, 9, 21, 0.05);
+}
+
+.sma-quality {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sma-quality p {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.slant {
+  color: var(--muted);
+  font-size: 10px;
+  font-style: italic;
 }
