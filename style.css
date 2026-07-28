@@ -838,16 +838,21 @@ img {
   .brands-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
   }
 }
 
 .brand {
   padding: 2rem 0;
-  max-width: 360px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .brand {
+    flex: 1 1 280px;
+    max-width: 550px;
+  }
 }
 
 .brand a {
@@ -1981,7 +1986,8 @@ span svg {
   position: relative;
 }
 
-.feature {
+.feature,
+.contact-detail {
   border: 1px solid var(--border);
   padding: 1.5rem;
   border-radius: 16px;
@@ -1995,7 +2001,8 @@ span svg {
 }
 
 .how-list .icon-container,
-.feature .icon-container {
+.feature .icon-container,
+.contact-detail .icon-container {
   width: 48px;
   height: 48px;
   border: 1px solid var(--border);
@@ -2012,13 +2019,15 @@ span svg {
   gap: 3rem;
 }
 
-.feature {
+.feature,
+.contact-detail {
   display: flex;
   grid-template-columns: auto 1fr;
   gap: 1rem;
 }
 
-.features-list {
+.features-list,
+.contact-details {
   display: grid;
   gap: 1rem;
 }
@@ -2226,7 +2235,7 @@ span svg {
   background: rgba(255, 166, 0, 0.139);
 }
 
-.active {
+.active-tag {
   color: rgb(75, 171, 75);
   background: rgba(75, 171, 75, 0.139);
 }
@@ -2238,4 +2247,67 @@ span svg {
 .testimonials .container {
   display: grid;
   gap: 3rem;
+}
+
+.contact-section .container {
+  display: grid;
+  gap: 3rem;
+}
+
+.contact-section-main {
+  display: grid;
+  gap: 3rem;
+}
+
+.contact-section-top {
+  padding-top: 100px;
+}
+
+@media (min-width: 1024px) {
+  .contact-section-main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto auto;
+    gap: 3rem;
+  }
+}
+
+.contact-section-main .text-container p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.contact-details {
+}
+
+.contact-form {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(5, auto);
+}
+
+.contact-form form input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  height: 48px;
+}
+
+.contact-form form input:focus {
+  border: 1px solid var(--border);
+}
+
+.contact-form form button {
+  margin-top: 2rem;
+}
+
+a .btn {
+  width: 100%;
 }
