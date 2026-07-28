@@ -1549,7 +1549,7 @@ span svg {
 
 @media (min-width: 1024px) {
   .testimony-card {
-    flex: 0 0 calc((100%-2rem) / 3);
+    flex: 0 0 calc((100% - 2rem) / 3);
   }
 }
 
@@ -1560,16 +1560,17 @@ span svg {
 
 .testimonial-slider {
   position: relative;
-  border: 2px solid blue;
+  padding-inline: 16px;
   width: 100%;
+  overflow: hidden;
 }
 
 .testimonial-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: none;
   background: rgba(255, 255, 255, 0.08);
@@ -1585,11 +1586,11 @@ span svg {
 }
 
 .prev {
-  left: 10px;
+  left: 0;
 }
 
 .next {
-  right: 10px;
+  right: 0;
 }
 
 .testimony-card .profile .profile-container {
@@ -1638,7 +1639,6 @@ span svg {
 .testimony-section .container {
   display: grid;
   gap: 2rem;
-  border: 2px solid green;
 }
 
 .testimony-section {
@@ -1740,7 +1740,6 @@ span svg {
 
 .graphics-section-header {
   display: flex;
-  border: 2px solid green;
 }
 
 .graphics h2 {
@@ -1948,7 +1947,9 @@ span svg {
   gap: 1rem;
 }
 
-.sms-page-hero .hero-content button {
+.sms-page-hero .hero-contents p {
+  width: 85%;
+  margin: 0 auto;
 }
 
 .number-illustration-list {
