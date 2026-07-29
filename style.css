@@ -1758,6 +1758,7 @@ span svg {
   padding: 0.5rem;
   border-radius: 14px;
   background: #fff;
+  box-shadow: 1px 1px 10px #fff;
 }
 
 .brand-social-icons-container img {
@@ -1767,6 +1768,18 @@ span svg {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+.brand-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 /*===================== GRAPHICS SECTION ====================*/
 
@@ -2072,11 +2085,18 @@ span svg {
 
 .how-list .icon-container,
 .feature .icon-container,
-.contact-detail .icon-container {
+.contact-detail .icon-container,
+.brand-title .icon-container {
   width: 48px;
   height: 48px;
   border: 1px solid var(--border);
   border-radius: 10px;
+}
+
+.brand-title .icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
 }
 
 .how-it-works .container {
@@ -2255,12 +2275,23 @@ span svg {
   justify-content: center;
 }
 
-.icon-container svg {
+.brand-title div {
+  display: flex;
+}
+
+.icon-container svg,
+.brand-title .icon-container svg {
   width: 24px;
   height: 24px;
 }
 
-.how .icon-container {
+.brand-title .icon-container svg {
+  width: 20px;
+  height: 20px;
+}
+
+.how .icon-container,
+.brand-title .icon-container {
   background: var(--accent);
 }
 
