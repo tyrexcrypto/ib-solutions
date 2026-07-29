@@ -714,10 +714,10 @@ img {
 .service-card {
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1.5rem;
   flex-shrink: 0;
-  flex: 0 1 250px;
+  flex: 0 0 250px;
   flex-shrink: 0;
   border: 1px solid var(--border);
   border-radius: 22px;
@@ -727,6 +727,10 @@ img {
     background 0.2s ease,
     border 0.2s ease,
     transform 0.2s ease;
+}
+
+.to-bottom {
+  margin-top: auto;
 }
 
 .service-card .icon-container {
@@ -879,6 +883,7 @@ img {
     var(--darker-accent)
   );
   padding: 3rem;
+  box-shadow: 2px 2px 20px #252323a1;
 }
 
 .cta-container button {
@@ -1545,7 +1550,7 @@ span svg {
 
 @media (min-width: 1024px) {
   .testimony-card {
-    flex: 0 0 calc((100% - 2rem) / 3);
+    flex: 0 0 calc((100% - 3rem) / 3);
   }
 }
 
@@ -1609,7 +1614,7 @@ span svg {
 
 .testimonies {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
