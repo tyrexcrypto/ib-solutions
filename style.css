@@ -220,6 +220,11 @@ nav {
   transition: 0.3s;
 }
 
+.close-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
 .close-btn:hover {
   border-color: var(--accent);
   background: rgba(181, 9, 20, 0.1);
@@ -266,6 +271,7 @@ nav {
 .sidebar-btns {
   margin-top: 5rem;
 }
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -524,23 +530,34 @@ img {
 .container .visuals-container {
 }
 
-/*
 .glass-container {
-  width: 240px;
-  height: 144px;
-  border-radius: 16px;
-  border: 1px solid hsla(0, 0%, 100%, 0.32);
+  position: absolute;
+  width: fit-content;
+  border-radius: 12px;
+  border: 1px solid hsla(0, 0%, 100%, 0.116);
   background: rgba(10, 10, 10, 0.3);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0px 2px 15px #f5f5f55b;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow:;
+  z-index: 3;
+}
+
+.glass-container h3 {
+  font-size: 14px;
+}
+
+.glass-container p {
+  font-size: 10px;
 }
 
 .glass-1 {
   position: absolute;
   top: 100px;
   left: -10px;
-  transform: skewY(20deg);
 }
 
 .glass-2 {
@@ -554,7 +571,26 @@ img {
   bottom: -10px;
   right: -50px;
 }
-*/
+
+.glass-4 {
+  top: 120px;
+  right: 10px;
+}
+
+.glass-5 {
+  top: 90px;
+  left: 10px;
+}
+
+.glass-6 {
+  bottom: 100px;
+  right: 10px;
+}
+
+.glass-7 {
+  bottom: 120px;
+  left: 10px;
+}
 
 .hero .container {
   /*min-height: inherit;*/
@@ -800,7 +836,7 @@ img {
 
 .map-dots {
   position: absolute;
-  right: -600px;
+  /*right: -600px;*/
   top: 50px;
   z-index: -1000;
   opacity: 0.7;
@@ -945,6 +981,7 @@ img {
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
+  z-index: 3;
 }
 
 .why-section-top .img-container img {
@@ -1792,6 +1829,7 @@ span svg {
 .why .container {
   display: grid;
   gap: 1rem;
+  position: relative;
 }
 
 @media (min-width: 1024px) {
@@ -1807,7 +1845,44 @@ span svg {
   }
 }
 
-.why div {
+.why .container .img-container {
+  position: relative;
+}
+
+.why .container .map-dots {
+  display: block;
+  top: 220px;
+  right: -600px;
+  opacity: 0.5;
+}
+
+.why-section-top {
+  overflow-x: hidden;
+  position: relative;
+  scrollbar-width: none;
+  -webkit-scrollbar-width: none;
+  z-index: 3;
+}
+
+.why-section-top h2,
+.why-section-top p {
+  z-index: 3;
+}
+
+.why-section-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  /*
+  background: radial-gradient(
+    circle at top right,
+    rgba(181, 9, 20, 0.3),
+    transparent 40%
+  );
+  pointer-events: none;
+  */
 }
 
 .footer-bottom p {
