@@ -1594,6 +1594,12 @@ span svg {
 .testimony-card .profile {
   display: flex;
   gap: 1rem;
+  align-items: center;
+}
+
+.profile-title {
+  font-size: 10px;
+  color: var(--mute);
 }
 
 .testimonial-slider {
@@ -1632,8 +1638,8 @@ span svg {
 }
 
 .testimony-card .profile .profile-container {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: linear-gradient(135deg, #b50914, #ff4d5a);
   display: flex;
