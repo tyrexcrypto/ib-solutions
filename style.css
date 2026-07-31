@@ -734,7 +734,7 @@ img {
   background: rgba(255, 255, 255, 0.02);
   transition: 0.2s ease;
   padding: 2rem;
-  box-shadow: 5px 5px 20px #252323a1;
+  box-shadow: 1px 1px 10px #252323a1;
 }
 
 .card:hover {
@@ -1247,7 +1247,7 @@ footer {
 
 .footer-socials {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -1584,6 +1584,21 @@ span svg {
   grid-template-rows: auto auto;
   flex: 0 0 100%;
   scroll-snap-align: center;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-stars {
+  display: flex;
+}
+
+.review-stars svg {
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 1024px) {
