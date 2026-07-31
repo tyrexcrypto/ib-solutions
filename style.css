@@ -2143,6 +2143,10 @@ span svg {
   gap: 1rem;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .features-list,
 .contact-details {
   display: grid;
