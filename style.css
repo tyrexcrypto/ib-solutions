@@ -2658,8 +2658,6 @@ a .btn {
 
   max-width: 520px;
 
-  max-height: 60vh;
-
   background: #121212;
 
   border-radius: 22px;
@@ -2673,8 +2671,6 @@ a .btn {
   transition: 0.35s;
 
   position: relative;
-
-  overflow-y: auto;
 }
 
 .community-portal.community-open .community-box {
