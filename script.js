@@ -110,3 +110,37 @@ const reviewStars = document.querySelectorAll(".review-stars");
 reviewStars.forEach((container) => {
   container.innerHTML = star.repeat(5);
 });
+
+const communityTrigger = document.getElementById("communityTrigger");
+
+const communityPortal = document.getElementById("communityPortal");
+
+const communityClose = document.getElementById("communityClose");
+
+function openCommunityPortal() {
+  communityPortal.classList.add("community-open");
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeCommunityPortal() {
+  communityPortal.classList.remove("community-open");
+
+  document.body.style.overflow = "";
+}
+
+communityTrigger.addEventListener("click", openCommunityPortal);
+
+communityClose.addEventListener("click", closeCommunityPortal);
+
+communityPortal.addEventListener("click", (event) => {
+  if (event.target === communityPortal) {
+    closeCommunityPortal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeCommunityPortal();
+  }
+});
