@@ -2657,6 +2657,7 @@ a .btn {
   width: min(92vw, 520px);
 
   max-width: 520px;
+  max-height: 85vh;
 
   background: #121212;
 
