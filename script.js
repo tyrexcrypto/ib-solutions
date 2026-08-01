@@ -144,3 +144,11 @@ document.addEventListener("keydown", (event) => {
     closeCommunityPortal();
   }
 });
+
+// Open automatically after page loads
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    openCommunityPortal();
+  }, 500); // Opens after 0.5 seconds
+});
