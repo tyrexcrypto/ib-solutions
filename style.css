@@ -2649,8 +2649,6 @@ a .btn {
   transition: 0.35s;
 
   z-index: 10000;
-
-  border: 2px solid blue;
 }
 
 .community-portal.community-open {
